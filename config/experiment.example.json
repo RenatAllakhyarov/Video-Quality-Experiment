@@ -1,0 +1,19 @@
+{
+  "dataset_manifest": "../dataset/manifest.csv",
+  "dataset_dir": "../video-tests",
+  "auto_discover": false,
+  "default_license": "VERIFY_LICENSE",
+  "output_dir": "../results",
+  "resume": true,
+  "metrics": {"vmaf": true, "vmaf_subsample": 1},
+  "preprocessing": [
+    {"id": "baseline", "kind": "none"},
+    {"id": "gamma_0_8", "kind": "gamma", "gamma": 0.8},
+    {"id": "contrast_16_235", "kind": "contrast", "x_min": 16, "x_max": 235}
+  ],
+  "encoders": [
+    {"id": "h264_crf23", "name": "libx264", "options": {"preset": "medium", "crf": 23}},
+    {"id": "h265_crf28", "name": "libx265", "options": {"preset": "medium", "crf": 28}},
+    {"id": "av1_crf32", "name": "libaom-av1", "options": {"cpu-used": 6, "crf": 32, "b:v": 0}}
+  ]
+}

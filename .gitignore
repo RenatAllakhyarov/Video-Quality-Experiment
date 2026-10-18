@@ -1,0 +1,26 @@
+# Local video data and generated experiment outputs
+video-tests/
+results/
+results_*/
+dataset/*.mp4
+dataset/*.mkv
+dataset/*.mov
+dataset/*.y4m
+dataset/*.yuv
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Local editor and OS files
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
+
+# Downloaded/source publication files; keep links and notes in Markdown instead
+ФОРМУЛЫ_И_ИСТОЧНИКИ/ИСТОЧНИКИ/*.pdf

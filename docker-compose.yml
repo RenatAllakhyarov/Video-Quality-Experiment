@@ -1,0 +1,21 @@
+services:
+  video-quality:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: video-quality-experiment:local
+    working_dir: /workspace
+    environment:
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - .:/workspace
+    command: ["python", "-m", "video_quality.cli", "run", "--config", "config/experiment.json"]
+
+  tests:
+    image: video-quality-experiment:local
+    working_dir: /workspace
+    environment:
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - .:/workspace
+    command: ["python", "-m", "unittest", "discover", "-v"]

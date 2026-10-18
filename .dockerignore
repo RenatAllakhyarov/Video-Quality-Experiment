@@ -1,0 +1,9 @@
+.git
+.gitignore
+__pycache__
+*.pyc
+results/
+results_smoke/
+results_all/
+results_vmaf/
+*.log
